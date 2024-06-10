@@ -2,8 +2,11 @@
 import axios from 'axios';
 import { Board, List, Card } from '../types/trello';
 
-const API_KEY = '46d77ac987d14baeacb2657c2b3ea873';  
-const TOKEN = 'ATTA81bc3eb9790519893e1214f7be1973994b43b46d9da07f7a34e9768f5b4142423E19956A';  
+// const API_KEY = '46d77ac987d14baeacb2657c2b3ea873';  
+// const TOKEN = 'ATTA81bc3eb9790519893e1214f7be1973994b43b46d9da07f7a34e9768f5b4142423E19956A';  
+
+const API_KEY = process.env.REACT_APP_TRELLO_API_KEY;
+const TOKEN = process.env.REACT_APP_TRELLO_TOKEN; 
 
 const trelloApi = axios.create({
   baseURL: 'https://api.trello.com/1/',
